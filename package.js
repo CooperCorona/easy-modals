@@ -15,6 +15,15 @@ Package.onUse(function(api) {
   api.use('ecmascript');
   api.mainModule('easy-modals.js');
   api.use('peppelg:bootstrap-3-modal');
+  api.use('templating', 'client');
+  api.addFiles([
+      './infoModal.html',
+      './infoModal.js',
+      './confirmModal.html',
+      './confirmModal.js',
+      './textModal.html',
+      './textModal.js'
+  ], 'client');
 });
 
 Package.onTest(function(api) {

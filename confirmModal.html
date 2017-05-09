@@ -1,0 +1,18 @@
+<template name="confirmModal">
+	<div class="modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>{{title}}</h3>
+				</div>
+				<div class="modal-body">
+					<p>{{text}}</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" id="easyModalConfirmButton" class="btn {{#if buttonClass}}{{buttonClass}}{{else}}btn-danger{{/if}}" data-dismiss="modal">Confirm</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

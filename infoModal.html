@@ -1,0 +1,17 @@
+<template name="infoModal">
+	<div class="modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>{{title}}</h3>
+				</div>
+				<div class="modal-body">
+					<p>{{text}}</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="easyModalOkButton" class="btn {{#if buttonClass}}{{buttonClass}}{{else}}btn-default{{/if}}" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
