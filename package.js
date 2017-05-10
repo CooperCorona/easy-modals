@@ -2,9 +2,9 @@ Package.describe({
   name: 'easy-modals',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'Different types of frequently used bootstrap modals. Presentation and functionality easily modifiable.',
   // URL to the Git repository containing the source code for this package.
-  git: '',
+  git: 'https://github.com/CooperCorona/easy-modals',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
@@ -22,7 +22,8 @@ Package.onUse(function(api) {
       './confirmModal.html',
       './confirmModal.js',
       './textModal.html',
-      './textModal.js'
+      './textModal.js',
+      './textModal.css'
   ], 'client');
 });
 

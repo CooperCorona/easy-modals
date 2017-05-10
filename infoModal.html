@@ -6,10 +6,14 @@
 					<h3>{{title}}</h3>
 				</div>
 				<div class="modal-body">
-					<p>{{text}}</p>
+                    {{#if template}}
+                        {{> Template.dynamic template=template}}
+                    {{else}}
+    					<p>{{text}}</p>
+                    {{/if}}
 				</div>
 				<div class="modal-footer">
-					<button type="button" id="easyModalOkButton" class="btn {{#if buttonClass}}{{buttonClass}}{{else}}btn-default{{/if}}" data-dismiss="modal">Ok</button>
+					<button type="button" id="easyModalOkButton" class="{{buttonClass}}" data-dismiss="modal">{{buttonText}}</button>
 				</div>
 			</div>
 		</div>

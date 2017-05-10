@@ -2,24 +2,26 @@
     <div class="modal fade">
         <div class="modal-dialog modal-lg">
     		<div class="modal-content">
-    			<div class="modal-header">
-    				<h3>{{title}}</h3>
-    			</div>
-    			<div class="modal-body">
-    				<p>{{text}}</p>
-                    <input type="text" id="textModalInput" name="textModalInput" class="form-control {{#if isValid}}validText{{else}}invalidText{{/if}}"/>
-                    {{#unless isValidOrEmpty}}
-                        <p class="errorMessage">{{invalidMessage}}</p>
-                    {{/unless}}
-    			</div>
-    			<div class="modal-footer">
-    				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    {{#if isValid}}
-    					<button type="button" id="easyModalConfirmButton" class="btn btn-danger" data-dismiss="modal">Confirm</button>
-                    {{else}}
-    					<button type="button" id="easyModalConfirmButton" class="btn btn-danger" data-dismiss="modal" disabled>Confirm</button>
-                    {{/if}}
-    			</div>
+                <form id="easyModalTextForm">
+        			<div class="modal-header">
+        				<h3>{{title}}</h3>
+        			</div>
+        			<div class="modal-body">
+        				<p>{{text}}</p>
+                        <input type="text" id="textModalInput" name="textModalInput" class="form-control {{#if isValid}}easyModals-validText{{else}}easyModals-invalidText{{/if}}"/>
+                        {{#unless isValidOrEmpty}}
+                            <p class="easyModals-errorMessage">{{invalidMessage}}</p>
+                        {{/unless}}
+        			</div>
+        			<div class="modal-footer">
+        				<button type="button" id="easyModalCancelButton" class="{{buttonClass}}" data-dismiss="modal">{{buttonText}}</button>
+                        {{#if isValid}}
+        					<button type="submit" id="easyModalConfirmButton" class="{{confirmButtonClass}}" data-dismiss="modal">{{confirmButtonText}}</button>
+                        {{else}}
+        					<button type="submit" id="easyModalConfirmButton" class="{{confirmButtonClass}}" data-dismiss="modal" disabled>{{confirmButtonText}}</button>
+                        {{/if}}
+        			</div>
+                </form>
     		</div>
         </div>
 	</div>
