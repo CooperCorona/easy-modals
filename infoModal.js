@@ -1,4 +1,4 @@
-Template.infoModal.helpers({
+Template.easyModalsInfoModal.helpers({
     'buttonClass':function() {
         let buttonClass = Template.instance().data.buttonClass;
         if (buttonClass == undefined) {
@@ -17,7 +17,7 @@ Template.infoModal.helpers({
     }
 });
 
-Template.infoModal.events({
+Template.easyModalsInfoModal.events({
 	'click #easyModalOkButton':function(event) {
 		if (Template.instance().data.callback != undefined) {
 			Template.instance().data.callback();

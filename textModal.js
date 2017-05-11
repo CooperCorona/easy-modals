@@ -1,7 +1,7 @@
-Template.textModal.onCreated(function() {
+Template.easyModalsTextModal.onCreated(function() {
     Template.instance().text = new ReactiveVar("");
 });
-Template.textModal.helpers({
+Template.easyModalsTextModal.helpers({
     'buttonClass':function() {
         let buttonClass = Template.instance().data.buttonClass;
         if (buttonClass == undefined) {
@@ -48,8 +48,8 @@ Template.textModal.helpers({
     }
 });
 
-Template.textModal.events({
-    'input #textModalInput':function(event) {
+Template.easyModalsTextModal.events({
+    'input #easyModalsTextModalInput':function(event) {
         Template.instance().text.set(event.target.value);
     },
     'submit #easyModalTextForm':function(event) {

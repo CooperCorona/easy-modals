@@ -13,8 +13,8 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.4.4.2');
   api.use('ecmascript');
-  api.mainModule('easy-modals.js');
   api.use('peppelg:bootstrap-3-modal');
+  api.mainModule('easy-modals.js');
   api.use('templating', 'client');
   api.addFiles([
       './infoModal.html',

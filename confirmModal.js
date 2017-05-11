@@ -1,4 +1,4 @@
-Template.confirmModal.helpers({
+Template.easyModalsConfirmModal.helpers({
     'buttonClass':function() {
         let buttonClass = Template.instance().data.buttonClass;
         if (buttonClass == undefined) {
@@ -33,7 +33,7 @@ Template.confirmModal.helpers({
     }
 });
 
-Template.confirmModal.events({
+Template.easyModalsConfirmModal.events({
     'click #easyModalCancelButton':function(event) {
         if (Template.instance().data.cancelCallback != undefined) {
             Template.instance().data.cancelCallback();
